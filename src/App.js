@@ -19,7 +19,7 @@ const App = () => {
               <i className="fa-solid fa-phone" />
             </a>
 
-            <a href='whatsapp://send?abid=+905551472046' className='text-4xl text-green-600 hover:text-black duration-300'>
+            <a href='https://api.whatsapp.com/send?phone=905551472046&text=Merhaba,%20websiteniz%20arac%C4%B1l%C4%B1%C4%9F%C4%B1yla%20size%20ula%C5%9F%C4%B1yorum.%20%20%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum' className='text-4xl text-green-600 hover:text-black duration-300'>
               <i className="fa-brands fa-whatsapp" />
             </a>
           </div>
