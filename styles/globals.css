@@ -14,46 +14,48 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 
 
 
 
-.slider{
+.slider {
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-.slides{
-  width: 500%;
+.slides {
+  width: 1000%;
   height: 100vh;
   display: flex;
 }
 
-.slides input{
+.slides input {
   display: none;
 }
 
-.slide{
-  width: 20%;
+.slide {
+  width: 10%;
   transition: 1s;
 }
 
-.slide img{
+.slide img {
   position: absolute;
   width: 100vw;
   min-width: 100vw;
   height: 100vh;
   min-height: 100vh;
   object-fit: cover;
+  object-position: top left;
 }
 
 /*css for manual slide navigation*/
 
-.navigation-manual{
+.navigation-manual {
   position: absolute;
   bottom: 0;
   padding: 1rem;
@@ -62,7 +64,7 @@ body {
   justify-content: center;
 }
 
-.manual-btn{
+.manual-btn {
   border: 2px solid #fff;
   padding: 5px;
   border-radius: 10px;
@@ -70,33 +72,48 @@ body {
   transition: .5s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
   margin-right: 40px;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
   background: #fff;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked~.first {
   margin-left: 0;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked~.first {
+  margin-left: -10%;
+}
+
+#radio3:checked~.first {
   margin-left: -20%;
 }
 
-#radio3:checked ~ .first{
+#radio4:checked~.first {
+  margin-left: -30%;
+}
+
+#radio5:checked~.first {
   margin-left: -40%;
 }
 
-#radio4:checked ~ .first{
+#radio6:checked~.first {
+  margin-left: -50%;
+}
+
+#radio7:checked~.first {
   margin-left: -60%;
 }
 
-/*css for automatic navigation*/
+#radio8:checked~.first {
+  margin-left: -70%;
+}
 
-.navigation-auto{
+/*css for automatic navigation*/
+.navigation-auto {
   position: absolute;
   bottom: 0;
   padding: 1rem;
@@ -105,29 +122,98 @@ body {
   justify-content: center;
 }
 
-.navigation-auto div{
+.navigation-auto div {
   border: 2px solid #fff;
   padding: 5px;
   border-radius: 10px;
   transition: 1s;
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
   margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
+#radio1:checked~.navigation-auto .auto-btn1 {
   background: #fff;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
+#radio2:checked~.navigation-auto .auto-btn2 {
   background: #fff;
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3{
+#radio3:checked~.navigation-auto .auto-btn3 {
   background: #fff;
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4{
+#radio4:checked~.navigation-auto .auto-btn4 {
   background: #fff;
+}
+
+#radio5:checked~.navigation-auto .auto-btn5 {
+  background: #fff;
+}
+
+#radio6:checked~.navigation-auto .auto-btn6 {
+  background: #fff;
+}
+
+#radio7:checked~.navigation-auto .auto-btn7 {
+  background: #fff;
+}
+
+#radio8:checked~.navigation-auto .auto-btn8 {
+  background: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation-auto div:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+
+/* whyus */
+.whyus {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 500px) {
+  .whyus {
+    background-image: url("../public/whyUSbg/500.jpg");
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .whyus {
+    background-image: url("../public/whyUSbg/768.jpg");
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .whyus {
+    background-image: url("../public/whyUSbg/1024.jpg");
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .whyus {
+    background-image: url("../public/whyUSbg/1440.jpg");
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .whyus {
+    background-image: url("../public/whyUSbg/1920.jpg");
+  }
+}
+
+@media only screen and (max-width: 3264px) {
+  .whyus {
+    background-image: url("../public/whyUSbg/3264.jpg");
+  }
 }

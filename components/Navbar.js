@@ -3,25 +3,31 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Navbar = () => {
+const Navbar = ({ navInHome }) => {
   const [navbarTransparent, setnavbarTransparent] = useState(true)
   const [menuActive, setmenuActive] = useState(false)
 
   const changeNavBackground = () => {
-    window.scrollY <= 50 ? setnavbarTransparent(true) : setnavbarTransparent(false)
+    if(navInHome) {
+      window.scrollY <= 50 ? setnavbarTransparent(true) : setnavbarTransparent(false)
+    }else {
+      setnavbarTransparent(false)
+    }
   }
-
+  
   useEffect(() => {
+    changeNavBackground()
     window.addEventListener('scroll', changeNavBackground)
   }, [])
 
   return (
-    <div className={`w-full min-w-full fixed top-0 z-40 duration-300 ${navbarTransparent ? "bg-transparent pt-4" : "bg-primary-light"}`}>
+    <div className={`w-full min-w-full fixed top-0 z-40 duration-300 ${navbarTransparent ? "bg-transparent pt-4" : "bg-primary-light shadow-md"}`}>
       <nav className={`container w-full max-w-7xl mx-auto px-8 py-6 pb-4 flex items-center justify-between antialiased font-sans lg:text-lg `}>
         <Link href={"/"}>
           <a>
             <Image
               src={"/giyotech.png"}
+              alt="giyotech"
               width={225}
               height={31}
             />
@@ -36,7 +42,7 @@ const Navbar = () => {
           </li>
 
           <li className='pr-4'>
-            <Link href="/urunler">
+            <Link href="/#urunler">
               <a className={`${navbarTransparent ? "hover:text-primary-light" : "hover:text-black"} transition-colors duration-300 pb-1`}>ÜRÜNLER</a>
             </Link>
           </li>
@@ -48,8 +54,8 @@ const Navbar = () => {
           </li>
 
           <li className='pr-4'>
-            <Link href="/hakkimizda">
-              <a className={`${navbarTransparent ? "hover:text-primary-light" : "hover:text-black"} transition-colors duration-300 pb-1`}>HAKKIMIZDA</a>
+            <Link href="/#hakkimizda">
+              <a className={`${navbarTransparent ? "hover:text-primary-light" : "hover:text-black"} transition-colors duration-300 pb-1`}> HAKKIMIZDA</a>
             </Link>
           </li>
 
@@ -61,7 +67,7 @@ const Navbar = () => {
         </ul>
 
         <motion.i
-          className={`fa-solid fa-bars md:hidden text-3xl ${navbarTransparent ? "text-primary-light" : "text-gray-900"}`}
+          className={`fa-solid fa-bars md:hidden text-3xl ${navbarTransparent ? "text-primary-light" : "text-blue-900"}`}
           whileTap={{ scale: .8, transition: { duration: .1 } }}
           onClick={() => setmenuActive(true)}
         />
@@ -76,6 +82,7 @@ const Navbar = () => {
             <a className='flex items-center justify-center mt-20 mb-12'>
               <Image
                 src={"/giyotech.png"}
+                alt="giyotech"
                 width={180}
                 height={25.8}
               />
@@ -90,7 +97,7 @@ const Navbar = () => {
             </li>
 
             <li className='pb-4'>
-              <Link href="/urunler">
+              <Link href="/#urunler">
                 <a className={`${navbarTransparent ? "hover:text-primary-light" : "hover:text-black"} transition-colors duration-300 pb-1`}>ÜRÜNLER</a>
               </Link>
             </li>
@@ -102,7 +109,7 @@ const Navbar = () => {
             </li>
 
             <li className='pb-4'>
-              <Link href="/hakkimizda">
+              <Link href="/#hakkimizda">
                 <a className={`${navbarTransparent ? "hover:text-primary-light" : "hover:text-black"} transition-colors duration-300 pb-1`}>HAKKIMIZDA</a>
               </Link>
             </li>
@@ -113,12 +120,19 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-{/*   BURADA KALDIK */}
-          <ul className='pl-8 py-10'>
+
+          <ul className='py-10 absolute bottom-0 w-full'>
             <li>
-              <a href='tel:+903442158284' target='_blank' rel="noopener noreferrer">
-              <i className="fa-solid fa-phone" />
+              <a href='tel:+903442158284' target='_blank' rel="noopener noreferrer" className='flex items-center justify-start bg-blue-600 py-3 px-4 font-bold text-primary-light rounded-md w-[220px] mx-auto'>
+              <i className="fa-solid fa-phone mr-2 text-xl" />
               +90 344 215 82 84
+              </a>
+            </li>
+
+            <li>
+              <a href='https://api.whatsapp.com/send?phone=905551472046&text=Merhaba,%20websiteniz%20arac%C4%B1l%C4%B1%C4%9F%C4%B1yla%20size%20ula%C5%9F%C4%B1yorum.%20%20%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum' target='_blank' rel="noopener noreferrer" className='mt-4 flex items-center justify-start bg-green-500 py-3 px-4 font-bold text-primary-light rounded-md w-[220px] mx-auto'>
+              <i className="fa-brands fa-whatsapp mr-2 text-2xl" />
+                +90 555 147 20 46
               </a>
             </li>
           </ul>
