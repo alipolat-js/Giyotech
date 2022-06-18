@@ -14,7 +14,7 @@ const WhyUs = () => {
               </div>
               Tercih
               Etmelisiniz<span className='text-rose-700'>?</span></h1>
-            <p className='text-gray-200 text-md md:text-xl tracking-widest font-bold mt-6'>200'den Fazla Müşterimiz GİYOTECH Ekibinden Memnun</p>
+            <p className='text-gray-200 text-md md:text-xl tracking-widest font-bold mt-6'>200&#39;den Fazla Müşterimiz GİYOTECH Ekibinden Memnun</p>
           </div>
 
           <p className='mt-3 max-w-5xl mx-auto text-primary-light text-lg md:text-xl font-serif lg:mt-7'>
