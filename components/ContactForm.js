@@ -13,7 +13,7 @@ const ContactForm = ({ defaultSubject }) => {
       name: Yup.string()
         .required('*zorunlu'),
       email: Yup.string()
-        .tel('Geçerli bir email adresi girin.')
+        .email('Geçerli bir email adresi girin.')
         .required('*zorunlu'),
       tel: Yup.string()
         .matches(phoneRegExp, 'Geçerli Bir Telefon Numarası Girin')
