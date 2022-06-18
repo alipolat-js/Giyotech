@@ -30,7 +30,7 @@ const Products = () => {
           <div>
             <Link href="/giyotin-cam-silinebilir-sistem">
               <div className='relative rounded-md overflow-hidden max-w-[300px] mx-auto cursor-pointer'>
-                <Image src={"/Product Section Images/giyotin-cam-silinebilir.jpg"} alt="Giyotin Cam Silinebilir Sistem" width={300} height={450} layout="responsive" objectFit='cover' />
+                <Image src={"/Product Section Images/giyotin-cam.jpg"} alt="Giyotin Cam Silinebilir Sistem" width={300} height={450} layout="responsive" objectFit='cover' />
                 <div className="w-full min-w-full h-full min-h-full bg-[#00000060] absolute top-0 text-primary-light flex justify-center flex-col ">
                   <div className='w-full max-w-7xl mx-auto px-8 '>
                     <h1 className='text-2xl font-bold font-sans mb-3 md:text-3xl'>Giyotin Cam &#40;Hareketli Küpeşte&#41; Silinebilir Sistem</h1>
