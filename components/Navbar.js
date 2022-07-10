@@ -130,6 +130,13 @@ const Navbar = ({ navInHome }) => {
             </li>
 
             <li>
+              <a href='tel:+905374187620' target='_blank' rel="noopener noreferrer" className='mt-4 flex items-center justify-start bg-blue-600 py-3 px-4 font-bold text-primary-light rounded-md w-[220px] mx-auto'>
+              <i className="fa-solid fa-phone mr-2 text-xl" />
+              +90 537 418 76 20
+              </a>
+            </li>
+
+            <li>
               <a href='https://api.whatsapp.com/send?phone=905551472046&text=Merhaba,%20websiteniz%20arac%C4%B1l%C4%B1%C4%9F%C4%B1yla%20size%20ula%C5%9F%C4%B1yorum.%20%20%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum' target='_blank' rel="noopener noreferrer" className='mt-4 flex items-center justify-start bg-green-500 py-3 px-4 font-bold text-primary-light rounded-md w-[220px] mx-auto'>
               <i className="fa-brands fa-whatsapp mr-2 text-2xl" />
                 +90 555 147 20 46

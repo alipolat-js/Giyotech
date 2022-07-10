@@ -44,6 +44,16 @@ const Footer = () => {
             </a>
 
             <a
+              href='tel:+905374187620'
+              target="_blank"
+              rel="noopener noreferrer"
+              className='hover:text-primary-light block mt-3'
+            >
+              <i className="fa-solid fa-phone pr-3 text-lg" />
+              +90 &#40;537&#41; 418 76 20
+            </a>
+
+            <a
               href='https://api.whatsapp.com/send?phone=905551472046&text=Merhaba,%20websiteniz%20arac%C4%B1l%C4%B1%C4%9F%C4%B1yla%20size%20ula%C5%9F%C4%B1yorum.%20%20%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum'
               target="_blank"
               rel="noopener noreferrer"
@@ -203,7 +213,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className='hover:text-primary-light text-gray-300 font-bold'
         >
-          &copy; Ali POLAT
+          &copy; 2022 Created by Ali POLAT
         </a>
       </div>
     </div >
